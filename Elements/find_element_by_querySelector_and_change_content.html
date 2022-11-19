@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>Find html element by query selector and change content example</h3>
+
+    <!--  example 1  -->
+    <h4>Example 1:</h4>
+    <p class="demo">Test title 1</p>
+    <p class="demo">Test title 2</p>
+    <h4 id="demoID"></h4>
+
+    <!--  example 2  -->
+    <h4>Example 2:</h4>
+    <table>
+        <tbody>
+        <tr>
+            <td>data-1</td>
+            <td>data-2</td>
+            <td>data-3</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--  main script   -->
+    <script>
+        // -------------- example 1 --------------
+        // select element by query selector
+        const elements = document.querySelectorAll('p.demo');
+        // element content
+        var content = elements[0].innerText;
+        // change content
+        document.getElementById('demoID').innerHTML = "New content:"+content;
+
+        // -------------- example 2 --------------
+        // find element by query selector
+        const elements2 = document.querySelectorAll('tr td');
+        for (var i=0; i<elements2.length; i++){
+            var data2 = elements2[i].innerText;
+            console.log(data2);
+        }
+    </script>
+
+</body>
+</html>
