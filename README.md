@@ -9,3 +9,7 @@ Document object model (DOM) is a programming interface that allows to create, ch
 * Find HTML Element By Tag Name and Change Content
 * Find HTML Element By Query Selector and Change Content
 * Change Attribute Value
+
+##### 2. Forms
+* Find Form Elements by Object Collection
+* HTML Form Validation 
