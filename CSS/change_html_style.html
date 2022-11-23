@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>Change html style example</h3>
+
+    <!--  Example-1  -->
+    <h3 id="title">What is Lorem Ipsum?</h3>
+    <p id="content">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book
+    </p>
+    <button id="readMore">Read more</button>
+
+    <!--  main script   -->
+    <script>
+        <!-- title -->
+        document.getElementById('title').style.color = 'red';
+
+        <!-- content -->
+        document.getElementById('content').style.fontSize = '18px';
+        document.getElementById('content').style.fontFamily = 'Verdana,sans-serif';
+        document.getElementById('content').style.color = 'gray';
+        document.getElementById('content').style.width = '500px';
+
+        <!-- button -->
+        document.getElementById('readMore').style.fontSize = '16px';
+        document.getElementById('readMore').style.background = 'gray';
+        document.getElementById('readMore').style.color = 'white';
+    </script>
+
+</body>
+</html>
