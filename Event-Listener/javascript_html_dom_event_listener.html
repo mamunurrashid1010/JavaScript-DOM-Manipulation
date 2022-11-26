@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>HTML DOM Event-Listener example</h3>
+
+    <!--  Example-1  -->
+    <button id="testBtnId1">Click Me 1</button>
+    <!--  Example-2  -->
+    <button id="testBtnId2">Click Me 2</button>
+    <!--  Example-3  -->
+    <button id="testBtnId3">Example 3</button>
+    <p id="demoId"></p>
+    <!--  Example-4  -->
+    <button id="testBtnId4">Change color red</button>
+    <p id="demoId2">Test paragraph......</p>
+
+
+
+    <!--  main script   -->
+    <script>
+        // Example-1
+        document.getElementById('testBtnId1').addEventListener('click', function () {
+            alert('Hello');
+        });
+
+        // Example-2
+        document.getElementById('testBtnId2').addEventListener('click',testFunction);
+        function testFunction() {
+            alert('Welcome');
+        }
+
+        // Example-3
+        document.getElementById('testBtnId3').addEventListener('mouseover',function () {
+            document.getElementById('demoId').innerText = "Mouse Over";
+        })
+        document.getElementById('testBtnId3').addEventListener('mouseout',function () {
+            document.getElementById('demoId').innerText = "Mouse Out";
+        })
+        document.getElementById('testBtnId3').addEventListener('click',function () {
+            document.getElementById('demoId').innerText = "Clicked";
+        })
+
+        // Example-4
+        document.getElementById('testBtnId4').addEventListener('click',function () {
+            document.getElementById('demoId2').style.color = "red";
+        })
+    </script>
+
+</body>
+</html>
