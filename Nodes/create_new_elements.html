@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>HTML DOM Element Nodes example</h3>
+
+    <!--  Example-1  -->
+    <h4>Create New HTML Elements Example-1</h4>
+    <div id="paragraph">
+        <p id="p1">First Paragraph</p>
+        <p id="p2">Second Paragraph</p>
+    </div>
+
+    <!--  Example-2  -->
+    <h4>Create New HTML Elements Example-2</h4>
+    <div id="heading">
+        <h6>First Heading</h6>
+        <h6>Second Heading</h6>
+    </div>
+
+
+    <!--  main script   -->
+    <script>
+        // Example-1
+        const paragraphElement = document.createElement('p');
+        const node = document.createTextNode('Third Paragraph');
+        paragraphElement.appendChild(node);
+        document.getElementById('paragraph').appendChild(paragraphElement);
+        // insert before
+        const paragraphElement1 = document.createElement('p');
+        const node1 = document.createTextNode('Fourth paragraph');
+        paragraphElement1.appendChild(node1);
+        const firstParagraph = document.getElementById('p1');
+        document.getElementById('paragraph').insertBefore(paragraphElement1,firstParagraph);
+
+        // Example-1
+        const headingElement = document.createElement('h6');
+        const headingNode = document.createTextNode('Third Heading');
+        headingElement.appendChild(headingNode);
+        document.getElementById('heading').appendChild(headingElement);
+
+
+    </script>
+
+</body>
+</html>
