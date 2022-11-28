@@ -24,4 +24,4 @@ Document object model (DOM) is a programming interface that allows to create, ch
 * JavaScript HTML DOM  Event-Listener 
 
 ##### 6. Nodes
-* Create New HTML Elements
+* Create New HTML Element & Remove Element

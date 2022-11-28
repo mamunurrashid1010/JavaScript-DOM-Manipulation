@@ -20,6 +20,13 @@
         <h6>Second Heading</h6>
     </div>
 
+    <!--  Example-3 -->
+    <h4>Remove HTML Elements Example-3</h4>
+    <div>
+        <p class="pID">1. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <p class="pID">2. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <button onclick="removeElement()">Remove Element</button>
+    </div>
 
     <!--  main script   -->
     <script>
@@ -35,11 +42,21 @@
         const firstParagraph = document.getElementById('p1');
         document.getElementById('paragraph').insertBefore(paragraphElement1,firstParagraph);
 
-        // Example-1
+        // Example-2
         const headingElement = document.createElement('h6');
         const headingNode = document.createTextNode('Third Heading');
         headingElement.appendChild(headingNode);
         document.getElementById('heading').appendChild(headingElement);
+
+        // Example-3 remove element
+        function removeElement() {
+            const element3 = document.getElementsByClassName('pID');
+            if(element3.length == 0){
+                alert('Empty');
+            }
+            else
+                element3[0].remove();
+        }
 
 
     </script>
