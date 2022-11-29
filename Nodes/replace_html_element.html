@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>HTML DOM Element Nodes example</h3>
+
+    <!--  Example-1  -->
+    <h4>Replace HTML Elements Example-1</h4>
+    <div id="paragraph">
+        <p id="p1">First Test Paragraph</p>
+        <p id="p2">Second Test Paragraph</p>
+    </div>
+
+    <!--  main script   -->
+    <script>
+        // Example-1
+        const paragraphElement = document.createElement('p');
+        const node = document.createTextNode('New Replace Test Paragraph');
+        paragraphElement.appendChild(node);
+
+        const parent = document.getElementById('paragraph');
+        const child = document.getElementById('p1');
+        parent.replaceChild(paragraphElement,child);
+
+
+    </script>
+
+</body>
+</html>
