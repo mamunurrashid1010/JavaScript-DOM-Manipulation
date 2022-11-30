@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM Manipulation</title>
+</head>
+<body>
+    <h3>HTML DOM Node List example</h3>
+
+    <!--  Example-1  -->
+    <h4>Node List Length & Change color Dynamically :</h4>
+    <div id="paragraph">
+        <p>First Test Paragraph</p>
+        <p>Second Test Paragraph</p>
+        <p>Third Test Paragraph</p>
+        <label>Change Color:</label>
+        <input id="color" name="color" type="color" onchange="changeColor(this.value)" />
+    </div>
+
+    <!--  main script   -->
+    <script>
+        // Example-1
+        function changeColor(pColor) {
+            const nodeList = document.querySelectorAll('p');
+            for (let i=0;i<nodeList.length;i++){
+                nodeList[i].style.color = pColor;
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
