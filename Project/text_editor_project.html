@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Text Editor Project | Js DOM Manipulation</title>
+    <style>
+        .textBoxContainer{
+            width: 100%;
+        }
+        .tools{
+            width: 100%;
+            padding: 10px;
+            background-color: #1b5272;
+            color: white;
+        }
+        .tool{
+            display: inline;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .textBox{
+            width: 100%;
+            border: 2px solid #1b5272;
+            height: 300px;
+        }
+        h2{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Text Editor Project</h2>
+
+    <!-- Main Body -->
+    <div class="textBoxContainer">
+        <!-- Tools -->
+        <div class="tools">
+            <!-- Text Color -->
+            <div class="tool">
+                <label>Color:</label>
+                <input id="textColor" name="textColor" type="color" onchange="changeTextColor(this.value)" />
+            </div>
+
+            <!-- Text Size -->
+            <div class="tool">
+                <label>Size:</label>
+                <input id="textSize" name="textSize" type="number" value="" onchange="changeTextSize(this.value)" style="width: 60px; height: 20px" />
+            </div>
+
+        </div>
+
+        <!-- Text Box -->
+        <div>
+            <textarea id="textBox" name="textBox" class="textBox" rows="20"></textarea>
+        </div>
+    </div>
+    <!-- /Main Body -->
+
+    <!--  main script   -->
+    <script>
+        // text color change
+        function changeTextColor(color) {
+            document.getElementById('textBox').style.color = color;
+        }
+
+        // text size change
+        function changeTextSize(size) {
+            document.getElementById('textBox').style.fontSize = size+"px";
+        }
+
+    </script>
+
+</body>
+</html>
