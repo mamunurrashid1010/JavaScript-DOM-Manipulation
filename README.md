@@ -27,3 +27,7 @@ Document object model (DOM) is a programming interface that allows to create, ch
 * Create New HTML Element & Remove Element
 * Replace HTML Element
 * Node List Length & Change color Dynamically
+<hr>
+
+#### Project
+* Text Editor Project
