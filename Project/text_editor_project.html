@@ -46,6 +46,18 @@
                 <label>Size:</label>
                 <input id="textSize" name="textSize" type="number" value="" onchange="changeTextSize(this.value)" style="width: 60px; height: 20px" />
             </div>
+            <!-- Font Family -->
+            <div class="tool">
+                <label>Font:</label>
+                <select id="fontFamily" name="fontFamily" onchange="changeFont(this.value)" style="width: 150px; height: 27px">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="serif">serif</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="monospace">monospace</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+            </div>
 
         </div>
 
@@ -66,6 +78,11 @@
         // text size change
         function changeTextSize(size) {
             document.getElementById('textBox').style.fontSize = size+"px";
+        }
+
+        // font change
+        function changeFont(font) {
+            document.getElementById('textBox').style.fontFamily = font;
         }
 
     </script>
