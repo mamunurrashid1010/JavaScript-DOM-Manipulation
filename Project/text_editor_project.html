@@ -12,7 +12,7 @@
             background-color: #1b5272;
             color: white;
         }
-        .tool{
+        .tool, .textAlign{
             display: inline;
             padding-left: 10px;
             padding-right: 10px;
@@ -24,6 +24,9 @@
         }
         h2{
             text-align: center;
+        }
+        {
+
         }
 
     </style>
@@ -46,6 +49,18 @@
                 <label>Size:</label>
                 <input id="textSize" name="textSize" type="number" value="" onchange="changeTextSize(this.value)" style="width: 60px; height: 20px" />
             </div>
+
+            <!-- Text Alignment -->
+            <div class="textAlign">
+                <label>Text-Align:</label>
+                <select id="textAlign" name="textAlign" onchange="changeTextAlign(this.value)" style="width: 150px; height: 27px">
+                    <option value="left">left</option>
+                    <option value="center">center</option>
+                    <option value="right">right</option>
+                    <option value="justify">justify</option>
+                </select>
+            </div>
+
             <!-- Font Family -->
             <div class="tool">
                 <label>Font:</label>
@@ -78,6 +93,11 @@
         // text size change
         function changeTextSize(size) {
             document.getElementById('textBox').style.fontSize = size+"px";
+        }
+
+        // text align change
+        function changeTextAlign(textAlignValue) {
+            document.getElementById('textBox').style.textAlign = textAlignValue;
         }
 
         // font change
