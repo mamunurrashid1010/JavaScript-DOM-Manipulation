@@ -74,6 +74,9 @@
                 </select>
             </div>
 
+            <!-- Font Weight -->
+            <button id="textBold" name="textBold" value="false" onclick="changeTextBold()" style="width: 40px; height: 27px;font-weight: bold">B</button>
+
         </div>
 
         <!-- Text Box -->
@@ -103,6 +106,21 @@
         // font change
         function changeFont(font) {
             document.getElementById('textBox').style.fontFamily = font;
+        }
+
+        // text bold
+        function changeTextBold() {
+            var v = document.getElementById('textBold').value;
+            if(v == 'false'){
+                document.getElementById('textBox').style.fontWeight = "bold";
+                document.getElementById('textBold').value = 'true';
+            }
+            else {
+                document.getElementById('textBox').style.fontWeight = "normal";
+                document.getElementById('textBold').value = 'false';
+            }
+
+
         }
 
     </script>
