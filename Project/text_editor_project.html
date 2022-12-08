@@ -77,6 +77,9 @@
             <!-- Font Weight -->
             <button id="textBold" name="textBold" value="false" onclick="changeTextBold()" style="width: 40px; height: 27px;font-weight: bold">B</button>
 
+            <!-- Font Italic -->
+            <button id="textItalic" name="textItalic" value="false" onclick="changeTextItalic()" style="width: 40px; height: 27px;font-weight: bold;font-style: italic">I</button>
+
         </div>
 
         <!-- Text Box -->
@@ -121,6 +124,19 @@
             }
 
 
+        }
+
+        // text italic
+        function changeTextItalic() {
+            var v = document.getElementById('textItalic').value;
+            if(v == 'false'){
+                document.getElementById('textBox').style.fontStyle = "italic";
+                document.getElementById('textItalic').value = 'true';
+            }
+            else {
+                document.getElementById('textBox').style.fontStyle = "normal";
+                document.getElementById('textItalic').value = 'false';
+            }
         }
 
     </script>
